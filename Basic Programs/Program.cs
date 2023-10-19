@@ -86,5 +86,28 @@ Console.WriteLine(electricity2.consumername);
 Console.WriteLine(electricity2.CalculateBill());
 */
 
+/*using Basic_Programs;
+
+Employee employee = new Employee(111, "hari", "IT", 30000);
+Console.WriteLine(
+   "Emp Id : {0} \n" +
+   "Name : {1} \n" + 
+   "Dept : {2} \n" +
+   "BasicPay : {3}",   
+    employee.Eid,
+    employee.Ename,
+    employee.Dept,
+    employee.Basicpay);
+Console.WriteLine("Salary :" + employee.CalculateSalary());
+*/
+
+using Basic_Programs;
+using System.Reflection.Metadata;
+
+ ArraysEx arraysEx = new ArraysEx();
+//arraysEx.Onedim();
+//arraysEx.Twodim();
+arraysEx.Ja();
+
 
 
