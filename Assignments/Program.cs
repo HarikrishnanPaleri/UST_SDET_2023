@@ -30,7 +30,7 @@ foreach (Product product in products)
     Console.WriteLine("Total value of " + product.ProductName + ":" + product.ProductValue());
 }
 */
-
+/*
 using Assignments;
 
 Student[] student = new Student[3];
@@ -43,4 +43,33 @@ foreach(Student s in student)
     s.CalculateAverage();
     s.GetMarksSummary();
     Console.WriteLine();
+}*/
+
+using Assignments;
+
+Console.WriteLine("1. EP\n2. DP\n3. CP");
+switch(Convert.ToInt32(Console.ReadLine()))
+{
+    case 1:
+        ElectronicsProduct ep = new ElectronicsProduct("Iphone", 85000, 1, 1);
+        ep.DisplayProductDetails();
+        ep.DisplayWarranty();
+        break;
+
+        case 2:
+
+        DigitalProduct dp = new("Bose", 60000, 2, 5, "mp3");
+        dp.DisplayProductDetails();
+        dp.DisplayWarranty();
+        dp.DisplayDigitalProduct();
+        break;
+
+        case 3:
+        ClothingProduct cp = new("LV", 30000, 2, "large");
+        cp.DisplayProductDetails();
+        cp.DisplaySize();
+        break;
 }
+
+
+
