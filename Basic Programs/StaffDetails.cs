@@ -16,7 +16,7 @@ namespace Basic_Programs
         public void DisplayStaffDetails()
 
         {
-            Console.WriteLine("Staff id : {0} \nName: {1}\n" + "Dept : {2}", Staffid, Name, Dept);
+            Console.WriteLine("staff id : {0} \nname: {1}\n" + "Dept : {2}", Staffid, Name, Dept);
         }
     }
 }

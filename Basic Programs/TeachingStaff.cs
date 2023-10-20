@@ -13,7 +13,7 @@ namespace Basic_Programs
         public int Sem {  get; set; }
         public void DisplayTSStaffDetails()
         {
-            Console.WriteLine("Specialization: {0} \n Sem : {1}", Specializations,Sem);
+            Console.WriteLine("specialization: {0} \n Sem : {1}", Specializations,Sem);
         }
     }
 }

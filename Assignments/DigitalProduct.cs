@@ -16,7 +16,7 @@ namespace Assignments
 
         public void DisplayDigitalProduct()
         {
-            Console.WriteLine("FileFormat:" + FileFormat);
+            Console.WriteLine("fileFormat:" + FileFormat);
         }
         
     }

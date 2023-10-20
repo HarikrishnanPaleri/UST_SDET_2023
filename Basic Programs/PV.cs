@@ -10,7 +10,7 @@ namespace Basic_Programs
     {
         public override string? SetTypeForVeh()
         {
-            return "Toyota";
+            return "toyota";
         }
        
     }

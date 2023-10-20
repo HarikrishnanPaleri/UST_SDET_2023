@@ -13,7 +13,7 @@ namespace Basic_Programs
         public int Experience { get; set; }
         public void DisplayNTSStaffDetails()
         {
-            Console.WriteLine("Responsibilities: {0} \n Experience : {1}", Responsibilities, Experience);
+            Console.WriteLine("responsibilities: {0} \n experience : {1}", Responsibilities, Experience);
         }
     }
 }

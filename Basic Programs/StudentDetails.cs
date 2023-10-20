@@ -21,7 +21,7 @@ namespace Basic_Programs
 
         public void DisplayStudentDetails()
         {
-            Console.WriteLine("Roll Num : {0} \nName: {1}\n" + "City : {2}", RollNo, StudentName, City);
+            Console.WriteLine("roll Num : {0} \nname: {1}\n" + "city : {2}", RollNo, StudentName, City);
         }
     }
 }

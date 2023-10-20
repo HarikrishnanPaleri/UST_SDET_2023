@@ -14,7 +14,7 @@ namespace Basic_Programs
 
         public void DisplayCollegeDetails()
         {
-            Console.WriteLine("College Name : {0} \nCollege Place: {1}\n", CollegeName, CollegePlace);
+            Console.WriteLine("college Name : {0} \nCollege Place: {1}\n", CollegeName, CollegePlace);
         }
     }
 }

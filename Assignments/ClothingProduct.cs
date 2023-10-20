@@ -15,7 +15,8 @@ namespace Assignments
         public string? Size {  get; set; }
         public void DisplaySize()
         {
-            Console.WriteLine("Size:" + Size);
+            Console.WriteLine("size:" + Size);
+            //
         }
     }
 }

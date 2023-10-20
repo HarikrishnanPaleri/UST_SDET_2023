@@ -12,10 +12,10 @@ namespace Basic_Programs
 
         public string  CalculateGrade()
         {
-            if (Average > 90) Grade = "A";
-            else if (Average>=60) Grade = "B";
-            else if(Average>=40) Grade = "C";   
-            else Grade = "D";   
+            if (Average > 90) Grade = "a";
+            else if (Average>=60) Grade = "b";
+            else if(Average>=40) Grade = "c";   
+            else Grade = "d";   
 
            return Grade;
             

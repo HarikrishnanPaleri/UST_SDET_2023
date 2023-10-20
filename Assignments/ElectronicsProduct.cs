@@ -17,7 +17,7 @@ namespace Assignments
 
         public void DisplayWarranty()
         {
-            Console.WriteLine("Warranty Period:" + WarrantyPeriod);
+            Console.WriteLine("warranty Period:" + WarrantyPeriod);
         }
 
     }
