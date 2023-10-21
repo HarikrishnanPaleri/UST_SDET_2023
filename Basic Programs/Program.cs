@@ -189,7 +189,7 @@ switch (Convert.ToInt32(Console.ReadLine()))
 
 }
 */
-
+/*
 EV ev = new EV();
 ev.Vehnum = 1442;
 ev.Brand = "XX"
@@ -206,6 +206,16 @@ pv.Brand = "YY";
 pv.Model = "BB";
 pv.Disp();
 Console.WriteLine(pv.SetTypeForVeh());
+*/
+
+//IDoctor doc = new Doctor();
+Doctor doc = new Doctor();
+doc.AddNewDoctor(11,"cc");
+doc.DisplayDoctorDetails();
+doc.ModifyDoctor(987,"bb");
+doc.DisplayDoctorDetails();
+doc.BookApp(123 , "NEW");
+doc.DelApp("hh");
 
 
 
