@@ -48,7 +48,7 @@ foreach(Student s in student)
 //20-10-2023
 
 using Assignments;
-
+/*
 Console.WriteLine("1. EP\n2. DP\n3. CP");
 switch(Convert.ToInt32(Console.ReadLine()))
 {
@@ -72,6 +72,23 @@ switch(Convert.ToInt32(Console.ReadLine()))
         cp.DisplaySize();
         break;
 }
+*/
+/*
+Employee emp = new(44, "Harikrishnan", "Paleri", 17);
+emp.DisplayInfo();
+*/
+/*
+Circle c = new Circle() { Radius = 4 };
+c.Draw();
+Rectangle r = new Rectangle()
+{
+    Length = 4,
+    Width = 5
 
+};
+
+r.Draw();
+
+*/
 
 

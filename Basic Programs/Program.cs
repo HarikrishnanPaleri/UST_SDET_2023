@@ -208,15 +208,52 @@ pv.Disp();
 Console.WriteLine(pv.SetTypeForVeh());
 */
 
-//IDoctor doc = new Doctor();
-Doctor doc = new Doctor();
+/*Doctor doc = new Doctor();
 doc.AddNewDoctor(11,"cc");
 doc.DisplayDoctorDetails();
 doc.ModifyDoctor(987,"bb");
 doc.DisplayDoctorDetails();
 doc.BookApp(123 , "NEW");
 doc.DelApp("hh");
+*/
+//BankDetails bd1 = new(1234, 15272772L, "BB","inactive");
+//BankDetails bd2 = new();
+BankDetailsNew bd2 = new(1234, 15272772L, "BB", "inactive");
+bd2.WelcomeMessage();
 
+
+
+//bd2.WelcomeMessage("HARi");
+
+Console.WriteLine("1. Custid 2. AccNo 3.Name");
+int ch = Convert.ToInt32(Console.ReadLine());
+
+switch(ch)
+{
+    case 1:
+        Console.WriteLine("Custid :");
+      //  bd.GetAccDetails(Convert.ToInt32(Console.ReadLine()));
+       // bd1.GetAccDetails(Convert.ToInt32(Console.ReadLine()));
+        bd2.GetAccDetails(Convert.ToInt32(Console.ReadLine())); 
+        break;
+        case 2:
+        Console.WriteLine("AccNo:");
+       // bd.GetAccDetails(Convert.ToInt64(Console.ReadLine()));
+      //  bd1.GetAccDetails(Convert.ToInt64(Console.ReadLine()));
+        bd2.GetAccDetails(Convert.ToInt64(Console.ReadLine()));
+        break;
+
+    case 3:
+        Console.WriteLine("Name:");
+      //  bd.GetAccDetails(Console.ReadLine());
+       // bd1.GetAccDetails(Convert.ToInt32(Console.ReadLine()));
+        bd2.GetAccDetails(Convert.ToInt32(Console.ReadLine()));
+        break;
+  default:Console.WriteLine("Enter 1,2 or 3");
+        break;
+
+
+}
 
 
 
