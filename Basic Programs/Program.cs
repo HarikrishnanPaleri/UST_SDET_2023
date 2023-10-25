@@ -218,6 +218,7 @@ doc.DelApp("hh");
 */
 //BankDetails bd1 = new(1234, 15272772L, "BB","inactive");
 //BankDetails bd2 = new();
+/*
 BankDetailsNew bd2 = new(1234, 15272772L, "BB", "inactive");
 bd2.WelcomeMessage();
 
@@ -254,6 +255,18 @@ switch(ch)
 
 
 }
+*/
+/*
+NGC ngc = new NGC();
+//ngc.ArrayListHandling();
+//ngc.Queuehandling();
+//ngc.HThandling();
+ngc.SLHandling();
+*/
+Basic_Programs.GC gc = new Basic_Programs.GC();
+//gc.ListHandling();
+//gc.Stackhandking();
+gc.Dicthandling();
 
 
 

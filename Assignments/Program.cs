@@ -90,5 +90,19 @@ Rectangle r = new Rectangle()
 r.Draw();
 
 */
+/*
+InsurancePolicy inp = new InsurancePolicy("LIC",12345678,20000);
+inp.RenewPolicy(25000);
+inp.RenewPolicy();
+*/
+
+
+LifeInsurance li = new LifeInsurance("LIC", 12456727, 20000, 59);
+li.CalculatePremium();
+Console.WriteLine("Your premium amount is : {0}", li.PremiumAmount);
+
+CarInsurance ci = new CarInsurance("LIC", 12456727, 20000, 400000);
+ci.CalculatePremium();
+Console.WriteLine("Premium for your Car Insurance is : {0}",ci.PremiumAmount);
 
 
