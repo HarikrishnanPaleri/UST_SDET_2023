@@ -110,6 +110,7 @@ using System.Reflection.Metadata;
 arraysEx.Ja();
 */
 using Basic_Programs;
+using Basic_Programs.ExceptionMessages;
 
 //StudentMarks marks = new StudentMarks(1000,"Hari","Kannur",90,95,100,0,0);
 //marks.DisplayStudentDetails();
@@ -263,12 +264,69 @@ NGC ngc = new NGC();
 //ngc.HThandling();
 ngc.SLHandling();
 */
+/*
 Basic_Programs.GC gc = new Basic_Programs.GC();
 //gc.ListHandling();
 //gc.Stackhandking();
 gc.Dicthandling();
+*/
+
+ExcepHandling excep = new ExcepHandling(10, 2);
+//try
+//{
+//    excep.Divide();
+//}
+//catch (ArithmeticException ex)
+//{/*
+//                Console.WriteLine(ex.Message);
+//                Console.WriteLine(ex.StackTrace);
+//                Console.WriteLine(ex.Source);*/
+
+//    Console.WriteLine(MyExceptions.exmesslist[0]);
+//}
+//catch (IndexOutOfRangeException ex)
+//{
+//    Console.WriteLine(MyExceptions.exmesslist[1]);
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine(MyExceptions.exmesslist[2]);
+//}
+//finally
+//{
+//    Console.WriteLine("done");
+//}
+/*try
+{
+    excep.NumCheck();
+   
+}
+catch (ArgumentException) 
+{
+  //  Console.WriteLine(MyExceptions.exmesslist[3]);
 
 
+}*/
+
+/*
+try
+{
+    excep.NumCheck();
+}
+catch(MyExceptions.Number1Exception exce)
+{
+    Console.WriteLine(exce.Message);
+}
+
+try
+{
+    excep.NumCheck2();
+}
+catch (MyExceptions.Number2Exception exce)
+{
+    Console.WriteLine(exce.Message);
+}
+*/
 
 
 

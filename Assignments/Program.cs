@@ -95,8 +95,7 @@ InsurancePolicy inp = new InsurancePolicy("LIC",12345678,20000);
 inp.RenewPolicy(25000);
 inp.RenewPolicy();
 */
-
-
+/*
 LifeInsurance li = new LifeInsurance("LIC", 12456727, 20000, 59);
 li.CalculatePremium();
 Console.WriteLine("Your premium amount is : {0}", li.PremiumAmount);
@@ -104,5 +103,96 @@ Console.WriteLine("Your premium amount is : {0}", li.PremiumAmount);
 CarInsurance ci = new CarInsurance("LIC", 12456727, 20000, 400000);
 ci.CalculatePremium();
 Console.WriteLine("Premium for your Car Insurance is : {0}",ci.PremiumAmount);
+*/
+/*
+Customer cus1 = new(123, "aa", "1637838", 67);
+Customer cus2 = new(456, "bb", "1636838", 97);
+Customer cus3 = new(789, "cc", "1638838", 87);
 
+Dictionary<int, Customer> cust = new Dictionary<int, Customer>
+{
+    {0, cus1},
+    {1, cus2},
+    {2, cus3},
+
+};
+SearchCustomer("1637838");
+DisplayCustomer();
+void SearchCustomer(string phoneno)
+{
+    foreach (var i in cust.Values)
+    {
+        if (phoneno == i.PhoneNumber)
+        {
+            Console.WriteLine("Customer found");
+            Console.WriteLine(i.Name);
+            Console.WriteLine(i.Balance);
+            break;
+        }
+        else { Console.WriteLine("customer doesnt exist");
+        }
+    }
+}
+void DisplayCustomer()
+{
+    foreach (var i in cust.Values)
+    {
+        Console.WriteLine("Customer Id:{0}\tName:{1}\tPhoneNumber{2}\tBalance:{3}", i.CustomerId, i.Name, i.PhoneNumber, i.Balance);
+    }
+}
+*/
+/*
+CallRecord clr1 = new(123,9447539005,33);
+CallRecord clr2 = new(456,8848475311,44);
+CallRecord clr3 = new(789,9020202022,55);
+
+Dictionary<int, CallRecord> clr = new Dictionary<int, CallRecord>
+{
+    {0, clr1},
+    {1, clr2},
+    {2, clr3},
+
+};
+CallHistory(9447539005);
+TotalCalls();
+void CallHistory(double phoneno)
+{
+    foreach (var i in clr.Values)
+    {
+        if (phoneno == i.PhoneNumber)
+        {
+            Console.WriteLine("CallId:{0},PhoneNumber:{1}\t,CallTime:{2}",i.CallId,i.PhoneNumber,i.CallTime);
+        }
+       
+    }
+}
+void TotalCalls()
+{
+    Dictionary<double, int> totalcall = new Dictionary<double, int>();
+    foreach (var i in clr.Values)
+    {
+        if (totalcall.ContainsKey(i.PhoneNumber))
+        {
+            totalcall[i.PhoneNumber]++;
+        }
+        else
+        {
+            totalcall[i.PhoneNumber] = 1;
+        }
+    }
+    foreach (var i in totalcall)
+    {
+        Console.WriteLine("PhoneNumber:{0}\t", i.Key, i.Value);
+    }
+}
+*/
+Patient patie = new(1, "aaa", 145, "chickun gunia");
+try
+{
+    patie.AddPatient(patie);
+}
+catch(ArgumentException ex)
+{
+    Console.WriteLine(ex.Message);
+}
 
