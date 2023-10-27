@@ -327,7 +327,14 @@ catch (MyExceptions.Number2Exception exce)
     Console.WriteLine(exce.Message);
 }
 */
+/*
 
+FileOperations fo = new FileOperations();
+//fo.CreateFile();
+//fo.WriteData();
+//fo.ReadData();
+//fo.CopyMoveFile();
+//fo.DeleteData();
+fo.FileProperties();
 
-
-
+*/

@@ -48,29 +48,30 @@ foreach(Student s in student)
 //20-10-2023
 
 using Assignments;
+using Assignments.ExceptionHandling;
 /*
 Console.WriteLine("1. EP\n2. DP\n3. CP");
 switch(Convert.ToInt32(Console.ReadLine()))
 {
-    case 1:
-        ElectronicsProduct ep = new ElectronicsProduct("Iphone", 85000, 1, 1);
-        ep.DisplayProductDetails();
-        ep.DisplayWarranty();
-        break;
+case 1:
+ElectronicsProduct ep = new ElectronicsProduct("Iphone", 85000, 1, 1);
+ep.DisplayProductDetails();
+ep.DisplayWarranty();
+break;
 
-        case 2:
+case 2:
 
-        DigitalProduct dp = new("Bose", 60000, 2, 5, "mp3");
-        dp.DisplayProductDetails();
-        dp.DisplayWarranty();
-        dp.DisplayDigitalProduct();
-        break;
+DigitalProduct dp = new("Bose", 60000, 2, 5, "mp3");
+dp.DisplayProductDetails();
+dp.DisplayWarranty();
+dp.DisplayDigitalProduct();
+break;
 
-        case 3:
-        ClothingProduct cp = new("LV", 30000, 2, "large");
-        cp.DisplayProductDetails();
-        cp.DisplaySize();
-        break;
+case 3:
+ClothingProduct cp = new("LV", 30000, 2, "large");
+cp.DisplayProductDetails();
+cp.DisplaySize();
+break;
 }
 */
 /*
@@ -186,6 +187,7 @@ void TotalCalls()
     }
 }
 */
+/*
 Patient patie = new(1, "aaa", 145, "chickun gunia");
 try
 {
@@ -194,5 +196,80 @@ try
 catch(ArgumentException ex)
 {
     Console.WriteLine(ex.Message);
+}
+
+*/
+/*
+MedicalRecord mdr = new(123, "Adi", 23, "Loose motion", 1234, -1);
+try
+{
+    mdr.MedRecDetails(mdr);
+}
+catch(InvalidPatientDataException ipd)
+{
+   Console.WriteLine(ipd.Message);
+}
+catch(InvalidMedicalRecordException imd)
+{
+   Console.WriteLine(imd.Message);
+}
+*/
+
+/*
+repeat:
+Console.WriteLine("Select from options");
+Console.WriteLine("1.Add Patient\n2.View Patient\n3.Exit");
+string? choose = Console.ReadLine();
+if (choose == "1")
+{
+    Console.WriteLine("Enter id:");
+    int id = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("enter name:");
+    string? name = Console.ReadLine();
+    Console.WriteLine("enter age:");
+    int age = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("enter diagnosis:");
+    string? diagnosis = Console.ReadLine();
+    Patient patient = new(id, name, age, diagnosis);
+    //patient.CreateFile();
+    patient.PatientDetails(patient);
+  
+}
+else if(choose == "2")
+{
+    Patient.ViewPatientData();
+}
+Console.WriteLine("Do you want to continue? (Y/N)");
+string? title =Console.ReadLine();
+if(title=="y")
+{
+    goto repeat;
+}
+*/
+MedicalHistory mhy1 = new MedicalHistory(1,10,"cold","10/03/2023");
+MedicalHistory mhy2 = new MedicalHistory(2, 10, "old", "11/03/2023");
+MedicalHistory mhy3 = new MedicalHistory(3, 11, "ld", "12/03/2023");
+MedicalHistory.mh.Add(mhy1);
+MedicalHistory.mh.Add(mhy2);
+MedicalHistory.mh.Add(mhy3);
+
+repeat:
+Console.WriteLine("1.Add Medical History 2.View Medical History 3.Exit");
+string? choose = Console.ReadLine();
+if (choose == "1")
+{
+    MedicalHistory.AddMedHisFile(mhy1);
+    MedicalHistory.AddMedHisFile(mhy2);
+    MedicalHistory.AddMedHisFile(mhy3);
+}
+else if (choose == "2")
+{
+    MedicalHistory.ViewMedHisData();
+}
+Console.WriteLine("Do you want to continue? (Y/N)");
+string? title = Console.ReadLine();
+if (title == "y")
+{
+    goto repeat;
 }
 
