@@ -8,10 +8,12 @@ namespace CaseStudy
 {
     internal class Order
     {
-        Booktype[] bkt = new Booktype[10];
+        //Booktype[] bkt = new Booktype[10];
 
-        public string? OrderDt { get; set; }
-        public double TotalCost {  get; set; }
+        //public string? OrderDt { get; set; }
+        //public double TotalCost {  get; set; }
+        
+
     }
 
    
