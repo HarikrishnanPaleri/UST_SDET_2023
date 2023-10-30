@@ -245,7 +245,8 @@ if(title=="y")
 {
     goto repeat;
 }
-*/
+
+
 MedicalHistory mhy1 = new MedicalHistory(1,10,"cold","10/03/2023");
 MedicalHistory mhy2 = new MedicalHistory(2, 10, "old", "11/03/2023");
 MedicalHistory mhy3 = new MedicalHistory(3, 11, "ld", "12/03/2023");
@@ -272,4 +273,21 @@ if (title == "y")
 {
     goto repeat;
 }
+*/
+/*
+var RoomType1 = "single";
+var RoomType2 = 3;
 
+RoomReservation<string>.BookRoom(444, ref RoomType1);
+//RoomReservation<int>.BookRoom(666, ref RoomType2);
+RoomReservation<string>.CancelRoom(444);
+*/
+
+var typ1 = "Iphone";
+var typ2 = 20;
+var typ3 = "onida";
+Product<string>.AddProduct(1, ref typ1, 5, 1);
+Product<int>.AddProduct(2, ref typ2, 7, 4);
+Product<string>.UpdateProduct(1, typ3);
+Product<string>.DeleteProduct(2);
+Product<string>.SearchProduct(1);

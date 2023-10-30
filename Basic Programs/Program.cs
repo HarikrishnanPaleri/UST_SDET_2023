@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+/*
 /*Console.WriteLine("enter 2 numbers");
 int num1, num2, ans;
 num1 = Convert.ToInt32(Console.ReadLine());
@@ -337,4 +337,40 @@ FileOperations fo = new FileOperations();
 //fo.DeleteData();
 fo.FileProperties();
 
+
 */
+
+/*
+GenEx<int> g1 = new GenEx<int>(10,20);
+Console.WriteLine(g1.Val1+" "+ g1.Val2);
+
+GenEx<double> g2 = new GenEx<double>(10.98, 20.345);
+Console.WriteLine(g2.Val1 + " " + g2.Val2);
+
+GenEx<string> g3 = new GenEx<string>("Hi", "Hello");
+Console.WriteLine(g3.Val1 + " " + g3.Val2);
+
+
+GenEx<bool> g4 = new GenEx<bool>(true, false);
+Console.WriteLine(g4.Val1 + " " + g4.Val2);
+*/
+
+//GenEx<int> ga1 = new GenEx<int>(new int[3] { 10, 20,30 });
+//GenEx<int> ga = new GenEx<int>(new int[3]);
+//ga1.Disp();
+static void Swap<T>(ref T num1, ref T num2)
+{
+    T temp;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+
+}
+
+int n1 = 10, n2 = 20;
+char c1 = 'A', c2 = 'B';
+Swap<int>(ref n1, ref n2);
+Swap<char>(ref c1, ref c2);
+
+Console.WriteLine("a = {0},b = {1}", n1, n2);
+Console.WriteLine("c = {0},d = {1}", c1, c2);

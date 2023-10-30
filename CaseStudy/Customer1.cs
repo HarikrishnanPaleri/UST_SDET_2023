@@ -12,10 +12,10 @@ namespace CaseStudy
         public string? CustomerName { get; set; }
         public string? CustomerEmail { get; set; }
 
-        public List<DigitalProduct> orders = new List<DigitalProduct>();
-        public List<PhysicalProduct> ordersphy = new List<PhysicalProduct>();
-        public List<DigitalProduct> confirmedorders = new List<DigitalProduct>();
-        public List<PhysicalProduct> confirmedordersphy = new List<PhysicalProduct>();
+        public List<DigitalProduct> ordersdigital = new List<DigitalProduct>();
+        public List<PhysicalProduct> ordersdigitalphysical = new List<PhysicalProduct>();
+        public List<DigitalProduct> confirmedordersdigital = new List<DigitalProduct>();
+        public List<PhysicalProduct> confirmedordersdigitalphysical = new List<PhysicalProduct>();
         public static List<Customer1> customers = new List<Customer1>();
     }
 }

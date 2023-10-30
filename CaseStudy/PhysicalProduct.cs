@@ -38,7 +38,7 @@ namespace CaseStudy
 
         public void ProcessingPayment()
         {
-            Console.WriteLine("Enter debit/credit card details {0}", ProductName);
+            Console.WriteLine("Enter debit/credit card details for {0}", ProductName);
             string? crednum = Console.ReadLine();
             if (crednum == null)
             {

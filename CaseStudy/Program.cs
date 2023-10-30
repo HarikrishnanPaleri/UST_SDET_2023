@@ -120,10 +120,11 @@ cus2.CustomerID = 3;
 cus2.CustomerName = "abhi";
 cus2.CustomerEmail = "abhi@ust";
 Customer1.customers.Add(cus2);
+Console.WriteLine("_________________________Wellcome to E-Commerce ____________________________");
 
 while (true)
 {
-    Console.WriteLine("choose your option\n1.User\n2.Admin");
+    Console.WriteLine("Select your option\n1.User page\n2.Admin page");
     int option = Convert.ToInt32(Console.ReadLine());
 
     if (option == 1)
@@ -138,7 +139,7 @@ while (true)
         }
         while (true)
         {
-            Console.WriteLine("choose your option\n1.Add product to cart\n2.view all product\n3.place order\n4.Support\n5.view orders");
+            Console.WriteLine("choose your option\n1.Add product to cart\n2.view all product\n3.place order\n4.Support\n5.view ordersdigital");
             int optionuser = Convert.ToInt32(Console.ReadLine());
 
             switch (optionuser)
@@ -157,13 +158,13 @@ while (true)
                         }
                         else
                         {
-                            customer1.ordersphy.Add(PhysicalProduct.Products.Find(x => x.ProductId == productId));
+                            customer1.ordersdigitalphysical.Add(PhysicalProduct.Products.Find(x => x.ProductId == productId));
                             Console.WriteLine("product added to cart");
                         }
                     }
                     else
                     {
-                        customer1.orders.Add(DigitalProduct.Products.Find(x => x.ProductId == productId));
+                        customer1.ordersdigital.Add(DigitalProduct.Products.Find(x => x.ProductId == productId));
                         Console.WriteLine("product added to cart");
                     }
                     break;
@@ -187,13 +188,13 @@ while (true)
                     break;
                 case 3:
                     Customer1 customer = Customer1.customers.Find(x => x.CustomerID == cusId);
-                    if (customer.orders.Count == 0 && customer.ordersphy.Count == 0)
+                    if (customer.ordersdigital.Count == 0 && customer.ordersdigitalphysical.Count == 0)
                     {
                         Console.WriteLine("no product found in cart");
                     }
                     else
                     {
-                        foreach (var item in customer.orders)
+                        foreach (var item in customer.ordersdigital)
                         {
                             item.PlacingOrder();
                             item.ProcessingPayment();
@@ -201,10 +202,10 @@ while (true)
                             Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tFileFormat:{4}\tDownloadlink:{5}", item.ProductId,
                              item.ProductName, item.Price, item.ProductQuantity, item.FileFormat, item.DownloadLink);
                         }
-                        foreach (var item in customer.ordersphy)
+                        foreach (var item in customer.ordersdigitalphysical)
                         {
-                            Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tWeight:{4}" +
-                           "\tDimension:{5}", item.ProductId,
+                            Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tWeight in Kg:{4}" +
+                           "\tDimension in inches:{5}", item.ProductId,
                            item.ProductName, item.Price, item.ProductQuantity, item.ProductQuantity, item.Dimension);
                             item.PlacingOrder();
                             item.ProcessingPayment();
@@ -214,10 +215,10 @@ while (true)
                         int confirm = Convert.ToInt32(Console.ReadLine());
                         if (confirm == 1)
                         {
-                            customer.confirmedorders.AddRange(customer.orders);
-                            customer.orders.Clear();
-                            customer.confirmedordersphy.AddRange(customer.ordersphy);
-                            customer.ordersphy.Clear();
+                            customer.confirmedordersdigital.AddRange(customer.ordersdigital);
+                            customer.ordersdigital.Clear();
+                            customer.confirmedordersdigitalphysical.AddRange(customer.ordersdigitalphysical);
+                            customer.ordersdigitalphysical.Clear();
                             Console.WriteLine("order placed successfully");
                         }
                         else
@@ -236,19 +237,19 @@ while (true)
                     break;
                 case 5:
                     Customer1 customer2 = Customer1.customers.Find(x => x.CustomerID == cusId);
-                    if (customer2.confirmedorders.Count == 0 && customer2.confirmedordersphy.Count == 0)
+                    if (customer2.confirmedordersdigital.Count == 0 && customer2.confirmedordersdigitalphysical.Count == 0)
                     {
                         Console.WriteLine("no order details found");
                     }
                     else
                     {
-                        Console.WriteLine("Orders are");
-                        foreach (var item in customer2.confirmedorders)
+                        Console.WriteLine("ordersdigital are");
+                        foreach (var item in customer2.confirmedordersdigital)
                         {
                             Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tFileFormat:{4}\tDownloadlink:{5}", item.ProductId,
                             item.ProductName, item.Price, item.ProductQuantity, item.FileFormat, item.DownloadLink);
                         }
-                        foreach (var item in customer2.confirmedordersphy)
+                        foreach (var item in customer2.confirmedordersdigitalphysical)
                         {
                             Console.WriteLine("Productid:{0}\tProduct Name:{1}\tPrice:{2}\tProduct Quantity:{3}\tWeight:{4}" +
                            "\tDimension:{5}", item.ProductId,
