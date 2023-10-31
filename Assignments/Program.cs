@@ -292,7 +292,7 @@ Product<string>.UpdateProduct(1, typ3);
 Product<string>.DeleteProduct(2);
 Product<string>.SearchProduct(1);
 */
-
+/*
 public delegate double Empo(double pr);
 class Program
 {
@@ -330,5 +330,23 @@ class Program
         }
 
 
+    }
+}
+*/
+public delegate void Hotel();
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("------------WELCOME TO PARTY NIGHT----------");
+        HotelEvent hotelEvent = new HotelEvent("RAVE", DateOnly.Parse("31-10-2023"), "kochi", 500);
+        HotelEvent hotelEvent1 = new HotelEvent("PSY", DateOnly.Parse("30-10-2023"), "kochi", 400);
+        HotelEvent.AddEvent(hotelEvent);
+        HotelEvent.AddEvent(hotelEvent1);
+        Hotel hotelevent2 = HotelEvent.RegisterEvent;
+        Hotel hotelevent3 = HotelEvent.RegistrationStatus;
+        Hotel objectforall = hotelevent2 + hotelevent3;
+        objectforall.Invoke();
     }
 }
