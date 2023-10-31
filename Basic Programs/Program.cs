@@ -270,8 +270,7 @@ Basic_Programs.GC gc = new Basic_Programs.GC();
 //gc.Stackhandking();
 gc.Dicthandling();
 */
-
-ExcepHandling excep = new ExcepHandling(10, 2);
+//ExcepHandling excep = new ExcepHandling(10, 2);
 //try
 //{
 //    excep.Divide();
@@ -358,6 +357,7 @@ Console.WriteLine(g4.Val1 + " " + g4.Val2);
 //GenEx<int> ga1 = new GenEx<int>(new int[3] { 10, 20,30 });
 //GenEx<int> ga = new GenEx<int>(new int[3]);
 //ga1.Disp();
+/*
 static void Swap<T>(ref T num1, ref T num2)
 {
     T temp;
@@ -374,3 +374,48 @@ Swap<char>(ref c1, ref c2);
 
 Console.WriteLine("a = {0},b = {1}", n1, n2);
 Console.WriteLine("c = {0},d = {1}", c1, c2);
+*/
+
+public delegate void Del1();//declare the delegate
+public delegate void Del2(string msg);
+public delegate void Del3(int n1, int n2);
+public delegate int Del4(int n1, int n2);
+
+class Program
+{
+    public static void delcall()
+    {
+        Del1 dobj1 = DelEx.MethodA;
+        dobj1.Invoke();
+
+        Del2 dobj2 = DelEx.MethodB;
+        dobj2.Invoke("hi");
+    }
+    public static void Main(string[] args)
+    {
+        /*
+        Del1 dobj1 = DelEx.MethodA;
+        dobj1.Invoke();
+
+        Del2 dobj2 = DelEx.MethodB;
+        dobj2.Invoke("hi");
+        */
+
+        delcall();
+
+        DelEx delEx = new();
+        Del3 dobj3 = delEx.Add;
+        Del3 dobj5 = delEx.sub;
+
+        Del3 dforall = dobj3 + dobj5;
+
+       dforall(10, 20);
+
+        
+        DelEx delEx1 = new();
+        Del4 dobj4 = delEx1.Add1;
+        Console.WriteLine(dobj4(10, 4));
+    }
+    
+
+}

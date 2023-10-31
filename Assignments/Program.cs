@@ -282,7 +282,7 @@ RoomReservation<string>.BookRoom(444, ref RoomType1);
 //RoomReservation<int>.BookRoom(666, ref RoomType2);
 RoomReservation<string>.CancelRoom(444);
 */
-
+/*
 var typ1 = "Iphone";
 var typ2 = 20;
 var typ3 = "onida";
@@ -291,3 +291,44 @@ Product<int>.AddProduct(2, ref typ2, 7, 4);
 Product<string>.UpdateProduct(1, typ3);
 Product<string>.DeleteProduct(2);
 Product<string>.SearchProduct(1);
+*/
+
+public delegate double Empo(double pr);
+class Program
+{
+    public static void Main(string[] args)
+    {
+        repeat:
+        Console.WriteLine("Enter id:");
+        int Id = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter name:");
+        string? nm = Console.ReadLine();
+       Employee1 employee1 = new Employee1();
+        employee1.EmployeeId = Id;
+        employee1.Name = nm;
+        Console.WriteLine("Select bonus calculation method");
+        Console.WriteLine("1.Performance Rating\n2.Criteria");
+        string? choose = Console.ReadLine();
+        if(choose =="1")
+        {
+            Empo eo = Employee1.CalculateBonus;
+            Console.WriteLine("Enter performance threshold:");
+            Console.WriteLine(eo.Invoke(Convert.ToDouble(Console.ReadLine())));
+        }
+        else if(choose =="2") 
+        {
+            Empo eo = Employee1.CalculateBonus1;
+            Console.WriteLine("Enter performance threshold:");
+            Console.WriteLine(eo.Invoke(Convert.ToDouble(Console.ReadLine())));
+
+        }
+        Console.WriteLine("Do you want to continue? (Y/N)");
+        string? title = Console.ReadLine();
+        if (title =="y")
+        {
+            goto repeat;
+        }
+
+
+    }
+}
