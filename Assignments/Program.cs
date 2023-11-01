@@ -333,6 +333,7 @@ class Program
     }
 }
 */
+/*
 public delegate void Hotel();
 
 class Program
@@ -350,3 +351,14 @@ class Program
         objectforall.Invoke();
     }
 }
+*/
+
+/*
+TourismDestination.tourd.Add(new TourismDestination("Payyanur", "India", 5));
+TourismDestination.tourd.Add(new TourismDestination("Paris", "France", 2));
+TourismDestination.tourd.Add(new TourismDestination("NY", "USA",4 ));
+TourismDestination.tourd.Add(new TourismDestination("Niagra", "Canada", 4.5));
+TourismDestination.SortCountry();
+
+*/
+TouristDestination.TourDestination();
