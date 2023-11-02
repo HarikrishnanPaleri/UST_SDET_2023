@@ -33,7 +33,7 @@ namespace ThreadsEx
 
         public async Task RegisterStudentAsync(string studentName)
         {
-            // Simulate an asynchronous registration process
+            // Simulate an asynchronous registration process`
             await Task.Delay(1000); // Delay for 1 second (simulating work)
             lock (registeredStudents)
             {

@@ -360,5 +360,46 @@ TourismDestination.tourd.Add(new TourismDestination("NY", "USA",4 ));
 TourismDestination.tourd.Add(new TourismDestination("Niagra", "Canada", 4.5));
 TourismDestination.SortCountry();
 
+
+//TouristDestination.TourDestination();
+
+
+List<Hotel>hot = new List<Hotel>();
+hot.Add(new Hotel("Paris", "France", 5, "casa", 100));
+hot.Add(new Hotel("mumbai", "india", 4, "casa", 50));
+hot.Add(new Hotel("ny", "usa", 3, "casa", 20));
+
+foreach (var hotel in hot)
+{
+    Console.WriteLine("Available rooms at Casa" + hotel.AvailableRooms);
+}
+
+await BookRoomsAsync(hot[0], 20);
+await BookRoomsAsync(hot[1], 20);
+await BookRoomsAsync(hot[2], 2);
+foreach (var hotel in hot)
+{
+    Console.WriteLine("Available rooms at Casa" + hotel.AvailableRooms);
+        }
+static async Task BookRoomsAsync(Hotel hotel, int requestedRooms)
+{
+    await hotel.BookRooms(requestedRooms);
+}
 */
-TouristDestination.TourDestination();
+
+Tourpackage package = new Tourpackage(1, "Ice-land", "10-02-2023", 1467);
+Tourpackage package1 = new Tourpackage(2, "Norway", "05-06-2024", 1234);
+Tourpackage package2 = new Tourpackage(3, "Finland", "15-02-2024", 1998);
+
+Tourpackage.Tourpackages.Add(package1);
+Tourpackage.Tourpackages.Add(package2);
+Tourpackage.Tourpackages.Add(package);
+
+
+Thread thread = new Thread(Tourpackage.HotelReservation);
+
+Thread thread1 = new Thread(Tourpackage.HotelReservation);
+
+thread1.Start();
+thread1.Join();
+thread.Start();
