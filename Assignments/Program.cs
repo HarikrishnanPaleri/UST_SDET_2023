@@ -386,6 +386,7 @@ static async Task BookRoomsAsync(Hotel hotel, int requestedRooms)
     await hotel.BookRooms(requestedRooms);
 }
 */
+/*
 
 Tourpackage package = new Tourpackage(1, "Ice-land", "10-02-2023", 1467);
 Tourpackage package1 = new Tourpackage(2, "Norway", "05-06-2024", 1234);
@@ -403,3 +404,54 @@ Thread thread1 = new Thread(Tourpackage.HotelReservation);
 thread1.Start();
 thread1.Join();
 thread.Start();
+*/
+
+//03/11/2023
+/*
+TaskItem ts = new TaskItem(1, "videogame", false);
+TaskItem ts1 = new TaskItem(2, "run", true);
+TaskItem ts2 = new TaskItem(3, "MMA", true);
+TaskItem ts3 = new TaskItem(4, "Party", false);
+
+TaskItem.TaskItems.Add(ts);
+TaskItem.TaskItems.Add(ts1);
+TaskItem.TaskItems.Add(ts2);
+TaskItem.TaskItems.Add(ts3);
+TaskItem.DisplayTask();
+Console.WriteLine("Enter Task Id for changing the status ");
+int id = Convert.ToInt32(Console.ReadLine());
+var cobj = TaskItem.TaskItems.Find(x => x.TaskId == id);
+if (cobj != null)
+{
+    cobj.IsCompleted = true;
+    Console.WriteLine("status changed");
+}
+else
+    Console.WriteLine("id not found");
+Console.WriteLine("Enter the id to remove Task");
+int delete = Convert.ToInt32(Console.ReadLine());
+TaskItem.TaskItems.RemoveAll(x => x.TaskId == delete);
+Console.WriteLine("Task deleted");
+
+Console.WriteLine("Total Tasks Are");
+TaskItem.FilteringTask();
+*/
+FamilyMember grandparent = new FamilyMember("Grandparent", 70);
+FamilyTree familyTree = new FamilyTree(grandparent);
+
+FamilyMember parent1 = new FamilyMember("Father", 60);
+FamilyMember parent2 = new FamilyMember("Mother", 50);
+FamilyMember child1 = new FamilyMember("Child 1", 26);
+FamilyMember child2 = new FamilyMember("Child 2", 24);
+FamilyMember grandchild1 = new FamilyMember("Grandchild 1", 5);
+
+// Build family tree relationships
+grandparent.AddChild(parent1);
+grandparent.AddChild(parent2);
+parent1.AddChild(child1);
+parent1.AddChild(child2);
+child1.AddChild(grandchild1);
+
+// Display family tree
+Console.WriteLine("Family Tree:");
+familyTree.DisplayFamilyTree();
